@@ -18,6 +18,7 @@ function Register() {
 
         try{
             const RegData = await axios.post('https://localhost:7023/api/Register',RegForm)
+            console.log("Successfully" , RegData.data);
         }catch(err){
             console.error("Something fishy" , err)
         }
