@@ -23,7 +23,7 @@ function Register() {
             console.log(RegData);
             
         }catch(err){
-            console.error("Something fishy" , err)
+            console.error("Something fishy" , err);
         }
     }
     
