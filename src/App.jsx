@@ -1,12 +1,21 @@
 import React from 'react'
 import Register from './Pages/UserPages/Register'
 import Login from './Components/Login'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import Navbar from './Components/Navbar'
+import Doctors from './Pages/UserPages/Doctors'
 
 function App() {
   return (
     <div>
-      {/* <Register/> */}
-<Login/>
+      <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/register' element={<Register/>}/>
+        <Route path='/doctors' element={<Doctors/>}/>
+      </Routes>
+      </BrowserRouter>
     </div>
   )
 }

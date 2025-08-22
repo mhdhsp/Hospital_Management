@@ -4,8 +4,8 @@ import React, { useState } from 'react'
 function Login() {
 
     const [LogForm , setLogform ] = useState({
-        userName:'',
-        passWord:'',
+        UserName:'',
+        PassWord:'',
     })
 
     const HandleLog = (e) => {
@@ -15,10 +15,9 @@ function Login() {
         e.preventDefault()
 
         try{
-            const res = await axios.post('https://localhost:7023/api/Auth', LogForm)
+            const res = await axios.post('https://localhost:7023/api/Auth/login', LogForm)
             console.log("Successfull" , res.data);
-            localStorage.setItem("UserName",res.data.userName);
-            localStorage.setItem("Role",res.data.role)
+            localStorage.setItem("token",res.data.token);
         }catch(err){
             console.error("Error" ,err)
         }
@@ -27,10 +26,11 @@ function Login() {
     <div>
       <form onSubmit={HandleLogin}>
         <label>Name</label>
-            <input type="text" id='email' name='userName' value={LogForm.userName} onChange={HandleLog} placeholder='Enter Your Name'/>
+            <input type="text" id='email' name='UserName' value={LogForm.UserName} onChange={HandleLog} placeholder='Enter Your Name'/>
         <label>Password</label>
-            <input type="password" id='password' name='passWord' value={LogForm.passWord} onChange={HandleLog} placeholder='Enter Your Password'/>
+            <input type="password" id='password' name='PassWord' value={LogForm.PassWord} onChange={HandleLog} placeholder='Enter Your Password'/>
             <button type='submit '>Submit</button>
+            <h1>{localStorage.getItem("UserName")}</h1>
       </form>
     </div>
   )
