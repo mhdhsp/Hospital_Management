@@ -34,7 +34,7 @@ function Register() {
 
   return (
     <div>
-      <form onSubmit={HandleSubmit}>
+      <form onSubmit={HandleSubmit} className="flex flex-col justify-center items-center bg-blue-200">
         <label>Name</label>
 
         <input

@@ -23,13 +23,13 @@ function Login() {
         }
     }
   return (
-    <div>
-      <form onSubmit={HandleLogin}>
+    <div >
+      <form onSubmit={HandleLogin} className='flex flex-col justify-center items-center m-5 p-5'>
         <label>Name</label>
-            <input type="text" id='email' name='UserName' value={LogForm.UserName} onChange={HandleLog} placeholder='Enter Your Name'/>
+            <input className='m-2 p-2' type="text" id='email' name='UserName' value={LogForm.UserName} onChange={HandleLog} placeholder='Enter Your Name'/>
         <label>Password</label>
-            <input type="password" id='password' name='PassWord' value={LogForm.PassWord} onChange={HandleLog} placeholder='Enter Your Password'/>
-            <button type='submit '>Submit</button>
+            <input className='m-2 p-2' type="password" id='password' name='PassWord' value={LogForm.PassWord} onChange={HandleLog} placeholder='Enter Your Password'/>
+            <button className='m-2 p-2' type='submit '>Submit</button>
             <h1>{localStorage.getItem("UserName")}</h1>
       </form>
     </div>
