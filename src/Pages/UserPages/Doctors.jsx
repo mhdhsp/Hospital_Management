@@ -1,31 +1,4 @@
-// import axios from "axios";
-// import React, { useEffect, useState } from "react";
-// import { useNavigate } from "react-router-dom";
 
-// function Doctors() {
-//   const [doctors, setDoctors] = useState([]);
-//   const [loading, setLoading] = useState(true);
-//   const navigate=useNavigate();
-//   useEffect(() => {
-//     const token = localStorage.getItem("token");
-//     axios
-//       .get("https://localhost:7023/api/Doctor", {
-//         headers: { Authorization: `Bearer ${token}` },
-//       })
-//       .then((res) => setDoctors(res.data))
-//       .catch((err) => console.error(err))
-//       .finally(() => setLoading(false));
-//   }, []);
-// console.log(doctors);
-
-//   if (loading) return <p>Loading doctors...</p>;
-//   if (doctors.length === 0) return <p>No doctors found.</p>;
-
-  
-//   
-// }
-
-// export default Doctors;
 
 
 import React, { useEffect} from 'react'
@@ -75,7 +48,7 @@ return (
         className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
         onClick={() => navigate(`/${item.id}`)}
       >
-        Book Now
+        Explore Now
       </button>
     </div>
   ))}

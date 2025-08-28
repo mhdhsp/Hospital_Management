@@ -4,6 +4,7 @@ import Login from './Components/Login'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Navbar from './Components/Navbar'
 import Doctors from './Pages/UserPages/Doctors'
+import Explore from './Pages/UserPages/Explore'
 import Booking from './Pages/UserPages/Booking'
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/doctors' element={<Doctors/>}/>
-        <Route path='/:id' element={<Booking/>}/>
+        <Route path='/:id' element={<Explore/>}/>
+        <Route path=':id/booking' element={<Booking/>}/>
       </Routes>
       </BrowserRouter>
     </div>
