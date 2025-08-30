@@ -6,6 +6,7 @@ import Navbar from './Components/Navbar'
 import Doctors from './Pages/UserPages/Doctors'
 import Explore from './Pages/UserPages/Explore'
 import Booking from './Pages/UserPages/Booking'
+import Payment from './Pages/UserPages/Payment'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/doctors' element={<Doctors/>}/>
         <Route path='/:id' element={<Explore/>}/>
         <Route path=':id/booking' element={<Booking/>}/>
+        <Route path='/payment' element={<Payment/>}/>
       </Routes>
       </BrowserRouter>
     </div>

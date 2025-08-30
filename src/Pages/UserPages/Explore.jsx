@@ -68,7 +68,8 @@ function Explore() {
           <p>Date Joined: {doctor.dateJoined}</p>
           <p>Notes: {doctor.notes}</p>
         </div>
-        <button 
+        {
+          hideBooking?"":<button 
         onClick={
           ()=>{
                     setHideBooking(!hideBooking);
@@ -76,6 +77,7 @@ function Explore() {
         }}
         className="bg-blue-400 border rounded-lg col-span-2 p-3 font-bold"
         >Book appointment</button>
+        }
       </div>
       
       {
